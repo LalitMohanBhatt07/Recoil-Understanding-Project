@@ -7,7 +7,7 @@ export const networkAtom=atom({
 
 export const jobsAtom=atom({
     key:"jobsAtom",
-    default:0
+    default:0 
 })
 
 export const notificationAtom=atom({
