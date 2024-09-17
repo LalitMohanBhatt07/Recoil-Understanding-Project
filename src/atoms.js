@@ -20,9 +20,21 @@ export const messagingAtom=atom({
     default:0
 })
 
+// ? if we are having asynchronous data queries like we know that the data is coming from library that in that case we will perform following task
+// export const notifications=atom({
+// key:"notifications",
+// default:selector({
+//     key: "networkAtomSelector",
+//     get:async()=>{
+//         const res=await axios.get('https://sum-server.100xdevs.com/notification')
+//         return res.data;
+//     }
+// })
+
+// })
+
 export const totalNotificationSelector=selector({
     key:"totalNotificationSelector",
-
     get:({get})=>{
         const networkAtomCount=get(networkAtom);
         const notificationAtomCount=get(notificationAtom);
